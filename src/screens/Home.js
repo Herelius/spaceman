@@ -6,9 +6,6 @@ import axios from 'axios';
 import Search from '../components/Search';
 import PackageCard from '../components/Package';
 
-
-
-
 const Home = () => {
   const [marsInfos, setMarsInfos] = useState([]);
 
