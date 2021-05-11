@@ -10,7 +10,6 @@ import PackageCard from '../components/Package';
 const useStyles = makeStyles((theme) => ({
   home: {
     display: 'flex',
-    justifyContent: 'center',
     flexDirection: 'column',
     alignItems: 'center',
     width: '100%',
