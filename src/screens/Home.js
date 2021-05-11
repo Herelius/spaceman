@@ -14,21 +14,21 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   cardDisplay: {
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
     width: 'auto',
-    height: '100%'
-  }
+    height: '100%',
+  },
 }));
 
 const Home = () => {
   const [marsInfos, setMarsInfos] = useState([]);
   const classes = useStyles();
-  
+
   useEffect(() => {
     axios
       .get('https://api.spacexdata.com/v2/launches?launch_year=2019&2020')
