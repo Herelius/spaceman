@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     width: '70%',
     height: '100%',
     background: 'rgba(255, 255, 255, 0.91)',
-    borderRadius: '10%'
-    },
+    borderRadius: '10%',
+  },
   cardDisplay: {
     display: 'flex',
     justifyContent: 'center',
@@ -37,7 +37,6 @@ const Home = () => {
         return setMarsInfos(res.data.slice(0, 10));
       });
   }, []);
-
 
   return (
     <div className={classes.home}>
