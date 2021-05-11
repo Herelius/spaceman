@@ -1,40 +1,40 @@
 #form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 80px;
 }
 
 input {
-    width: 450px;
-    height: 30px;
-    margin-bottom: 20px;
+  width: 450px;
+  height: 30px;
+  margin-bottom: 20px;
 }
 
 textarea {
-    width: 450px;
-    margin-bottom: 40px;
+  width: 450px;
+  margin-bottom: 40px;
 }
 
 button {
-    width: 300px;
-    height: 40px;
-    align-self: center;
-    background-color: black;
-    color: white;
-    font-size: larger;
-    cursor: pointer;
+  width: 300px;
+  height: 40px;
+  align-self: center;
+  background-color: black;
+  color: white;
+  font-size: larger;
+  cursor: pointer;
 }
 
 button:hover {
-    color: #15cdfc;
+  color: #15cdfc;
 }
 
 h3 {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
 }

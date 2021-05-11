@@ -5,6 +5,7 @@ import axios from 'axios';
 // eslint-disable-next-line import/no-named-as-default
 import Package from '../components/Package';
 import Search from '../components/Search';
+import './Home.css';
 
 const Home = () => {
   const [marsImages, setMarsImages] = useState([]);

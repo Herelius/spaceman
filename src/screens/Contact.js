@@ -70,7 +70,6 @@ export default function Form() {
             required
           />
 
-
           <textarea
             name="description"
             placeholder="Message"
