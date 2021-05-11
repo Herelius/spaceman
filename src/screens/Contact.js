@@ -77,7 +77,7 @@ export default function Form() {
           rows="10"
           required
         />
-        <button type="submit">Envoyez</button>
+        <button type="submit">Send</button>
       </form>
     </div>
   );
