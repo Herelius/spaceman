@@ -10,7 +10,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    widht: 200,
+    widht: 'auto',
+    backgroundColor: '#ecf2ff',
+    borderRadius: '12px',
+    filter: 'drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3))',
   },
   formControl: {
     margin: theme.spacing(6),
@@ -18,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 120,
   },
   selectEmpty: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
   },
 }));
 
