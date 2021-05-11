@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './Contact.css';
 
 export default function Form() {
   // const [messages, setMessages] = useState([]);
@@ -35,49 +36,52 @@ export default function Form() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h1>
+        <h3>
           You can contact us by Space Mail if you fill the form and submit it.
           Space man is here to hear all your feedbacks and will contact you as
           soon as possible. <br />
           It's not the best choice, it's Space Man's choice !
-        </h1>
-        <input
-          type="email"
-          placeholder="Your Space Mail address"
-          name="email"
-          value={emailInputs.email}
-          onChange={handleChange}
-          required
-        />
+        </h3>
+        <div id="form">
+          <input
+            type="email"
+            placeholder="Your Space Mail address"
+            name="email"
+            value={emailInputs.email}
+            onChange={handleChange}
+            required
+          />
 
-        <input
-          type="text"
-          placeholder="Your Space Name"
-          name="name"
-          required
-          value={emailInputs.name}
-          onChange={handleChange}
-        />
+          <input
+            type="text"
+            placeholder="Your Space Name"
+            name="name"
+            required
+            value={emailInputs.name}
+            onChange={handleChange}
+          />
 
-        <input
-          type="text"
-          placeholder="Subject"
-          name="subject"
-          value={emailInputs.subject}
-          onChange={handleChange}
-          required
-        />
+          <input
+            type="text"
+            placeholder="Subject"
+            name="subject"
+            value={emailInputs.subject}
+            onChange={handleChange}
+            required
+          />
 
-        <textarea
-          name="description"
-          placeholder="Message"
-          value={emailInputs.description}
-          onChange={handleChange}
-          cols="30"
-          rows="10"
-          required
-        />
-        <button type="submit">Send</button>
+
+          <textarea
+            name="description"
+            placeholder="Message"
+            value={emailInputs.description}
+            onChange={handleChange}
+            cols="30"
+            rows="10"
+            required
+          />
+          <button type="submit">Send</button>
+        </div>
       </form>
     </div>
   );
