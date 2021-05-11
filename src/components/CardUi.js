@@ -24,8 +24,12 @@ export default function ImgMediaCard({
 }) {
   const classes = useStyles();
 
+  const cardStyle = {
+    backgroundColor: '#fff',
+  };
+
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={cardStyle}>
       <CardActionArea>
         <CardMedia
           component="img"
