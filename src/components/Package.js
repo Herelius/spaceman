@@ -105,7 +105,7 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
   moveRight: {},
 }));
 
-const Package = React.memo(function PackageCard() {
+export const Package = React.memo(function PackageCard() {
   const styles = useStyles();
   const ripStyles = useVerticalRipStyles({
     size: 24,
@@ -115,7 +115,10 @@ const Package = React.memo(function PackageCard() {
   return (
     <Card className={styles.card} elevation={0}>
       <div className={cx(styles.left, styles.moveLeft)}>
-        <CardMedia className={styles.media} />
+        <CardMedia
+          className={styles.media}
+          image="https://dejpknyizje2n.cloudfront.net/marketplace/products/yin-yang-two-fighting-dragons-sticker-1538772130.3390164.png"
+        />
       </div>
       <VerticalTicketRip
         classes={{
