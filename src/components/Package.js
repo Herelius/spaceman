@@ -16,8 +16,9 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     overflow: 'visible',
     background: 'none',
     display: 'flex',
-    minWidth: 343,
-    minHeight: 150,
+    justifyContent: 'center',
+    width: '80%',
+    height: '30%',
     filter: 'drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3))',
     '& $moveLeft, $moveRight': {
       transition: '0.3s',
@@ -105,7 +106,12 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
   moveRight: {},
 }));
 
-export const Package = React.memo(function PackageCard() {
+export const Package = React.memo(function PackageCard({
+  year,
+  mission,
+  departureSite,
+  company,
+}) {
   const styles = useStyles();
   const ripStyles = useVerticalRipStyles({
     size: 24,
@@ -117,7 +123,7 @@ export const Package = React.memo(function PackageCard() {
       <div className={cx(styles.left, styles.moveLeft)}>
         <CardMedia
           className={styles.media}
-          image="https://dejpknyizje2n.cloudfront.net/marketplace/products/yin-yang-two-fighting-dragons-sticker-1538772130.3390164.png"
+          image={company.mission_patch_small}
         />
       </div>
       <VerticalTicketRip
@@ -129,18 +135,19 @@ export const Package = React.memo(function PackageCard() {
       />
       <div className={cx(styles.right, styles.moveRight)}>
         <div className={styles.label}>
-          <h2 className={styles.heading}>BEK</h2>
-          <p className={styles.subheader}>Beijing China</p>
+          <h2 className={styles.heading}>ERTH</h2>
+          <p className={styles.subheader}>{year}</p>
+          <p className={styles.subheader}>{departureSite.site_name}</p>
         </div>
         <div className={styles.path}>
           <div className={styles.line}>
             <AirplanemodeActive className={styles.plane} />
           </div>
-          <span className={styles.flight}>AB256</span>
+          <span className={styles.flight}>{mission}</span>
         </div>
         <div className={styles.label}>
-          <h2 className={styles.heading}>DMK</h2>
-          <p className={styles.subheader}>Don Meaung</p>
+          <h2 className={styles.heading}>MRS</h2>
+          <p className={styles.subheader}>Roc Hotel</p>
         </div>
       </div>
     </Card>

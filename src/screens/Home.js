@@ -6,24 +6,31 @@ import Search from '../components/Search';
 import PackageCard from '../components/Package';
 
 const Home = () => {
-  const [marsImages, setMarsImages] = useState([]);
+  const [marsInfos, setMarsInfos] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY'
-  //     )
-  //     .then((res) => {
-  //       return setMarsImages(res.data.photos.slice(0, 9));
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get('https://api.spacexdata.com/v2/launches?launch_year=2019&2020')
+      .then((res) => {
+        return setMarsInfos(res.data.slice(0, 10));
+      });
+  }, []);
+
+  // https://images-api.nasa.gov/search?q=planete&media_type=image
 
   return (
     <>
       <h1>Space Man : It's not the best choice, it's Space Man's choice !</h1>
       <Search />
       <div>
-        <PackageCard />
+        {marsInfos.map((info) => (
+          <PackageCard
+            year={info.launch_year}
+            mission={info.mission_name}
+            departureSite={info.launch_site}
+            company={info.links}
+          />
+        ))}
       </div>
     </>
   );
