@@ -17,7 +17,7 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     background: 'none',
     display: 'flex',
     justifyContent: 'center',
-    width: '80%',
+    width: '50%',
     height: '30%',
     filter: 'drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3))',
     '& $moveLeft, $moveRight': {
