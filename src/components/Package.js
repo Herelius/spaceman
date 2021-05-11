@@ -13,6 +13,7 @@ const borderRadius = 12;
 
 const useStyles = makeStyles(({ palette, breakpoints }) => ({
   card: {
+    marginTop: 50,
     margin: 20,
     overflow: 'visible',
     background: 'none',
