@@ -61,9 +61,6 @@ const Navbar = () => {
             <NavLink style={textDecoration} to="/contact">
               Contact us
             </NavLink>
-            <NavLink style={textDecoration} to="/cart">
-              Cart
-            </NavLink>
           </NavMenu>
         </Nav>
       </IconContext.Provider>

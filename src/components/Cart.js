@@ -7,7 +7,7 @@ import './cart.css';
 function Cart() {
   const hotelPrice = 100;
   const [cart, updateCart] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return isOpen ? (
     <div className="cart">

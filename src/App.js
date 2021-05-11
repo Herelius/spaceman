@@ -8,8 +8,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      <RouteLink />
       <Cart />
+      <RouteLink />
     </div>
   );
 }
