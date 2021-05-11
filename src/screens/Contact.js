@@ -37,10 +37,9 @@ export default function Form() {
     <div>
       <form onSubmit={handleSubmit}>
         <h3>
-          You can contact us by Space Mail if you fill the form and submit it.
-          Space man is here to hear all your feedbacks and will contact you as
-          soon as possible. <br />
-          It's not the best choice, it's Space Man's choice !
+          You can contact us by Space Mail if you fill in the form bellow and
+          submit it. Space man is here to hear all your feedbacks and will
+          contact you as soon as possible!
         </h3>
         <div id="form">
           <input
@@ -79,7 +78,7 @@ export default function Form() {
             rows="10"
             required
           />
-          <button type="submit">Send</button>
+          <button type="submit">Send &#128640;</button>
         </div>
       </form>
     </div>
