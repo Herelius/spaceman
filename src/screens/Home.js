@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+// eslint-disable-next-line import/no-named-as-default
 import Package from '../components/Package';
 import Search from '../components/Search';
 
@@ -24,7 +25,7 @@ const Home = () => {
       <Search />
       <div>
         {marsImages.map((image) => (
-          <Package image={image.img_src} />
+          <Package />
         ))}
       </div>
     </>
