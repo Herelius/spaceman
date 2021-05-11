@@ -13,12 +13,14 @@ const borderRadius = 12;
 
 const useStyles = makeStyles(({ palette, breakpoints }) => ({
   card: {
+    margin: 20,
     overflow: 'visible',
     background: 'none',
     display: 'flex',
     justifyContent: 'center',
-    width: '50%',
-    height: '30%',
+    minWidth: 345,
+    width: 600,
+    minHeight: 100,
     filter: 'drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3))',
     '& $moveLeft, $moveRight': {
       transition: '0.3s',
