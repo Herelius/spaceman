@@ -1,11 +1,9 @@
-import React from 'react';
-
-function Package() {
+function Package({ image }) {
   // eslint-disable-next-line react/destructuring-assignment
   return (
     <div>
-      <h1>Package 1</h1>
-      <img alt="package 1" />
+      <h1>Package {}</h1>
+      <img src={image} alt="package" width="200" />
       <p>Prix:</p>
       <br />
       <p>Météo:</p>
