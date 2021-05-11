@@ -22,7 +22,10 @@ const Home = () => {
 
   return (
     <>
-      <h1>Space Man : It's not the best choice, it's Space Man's choice !</h1>
+      <h1>
+        Space Man : It's not the best choice, it's Space Man's choice !
+        &#128640;
+      </h1>
       <Search />
       <div>
         {marsImages.map((image) => (
