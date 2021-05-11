@@ -11,8 +11,12 @@ function Cart() {
 
   return isOpen ? (
     <div className="cart">
-      <button type="button" onClick={() => setIsOpen(false)}>
-        Close
+      <button
+        type="button"
+        className="buttonCloseCart"
+        onClick={() => setIsOpen(false)}
+      >
+        Close Cart
       </button>
       <h2>Cart</h2>
       <div>
@@ -24,7 +28,11 @@ function Cart() {
       <h3>Total : {hotelPrice * cart}€</h3>
     </div>
   ) : (
-    <button type="button" onClick={() => setIsOpen(true)}>
+    <button
+      type="button"
+      className="buttonOpenCart"
+      onClick={() => setIsOpen(true)}
+    >
       Open cart
     </button>
   );
