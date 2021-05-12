@@ -47,7 +47,7 @@ export default function Form() {
       // make an object to be handled from req.body on the backend.
       .then(() => {
         // eslint-disable-next-line no-alert
-        window.alert('Votre email a bien été envoyé (ne spammez pas trop :-)');
+        window.alert('Votre email a bien été envoyé');
       });
     setEmailInputs({
       email: '',
