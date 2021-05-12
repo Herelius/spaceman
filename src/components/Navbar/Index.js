@@ -13,7 +13,7 @@ const textDecoration = {
 };
 const logo = {
   textDecoration: 'none',
-  fontFamily: '##15cdfc',
+  fontFamily: 'Righteous, cursive',
   fontSize: '35px',
 };
 

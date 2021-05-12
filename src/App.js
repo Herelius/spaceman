@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <div className="bg-image">
       <Navbar />
       <RouteLink />
       <Footer />

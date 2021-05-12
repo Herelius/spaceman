@@ -12,8 +12,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '100%',
+    width: '70%',
     height: '100%',
+    borderRadius: '10%',
   },
   cardDisplay: {
     display: 'flex',
@@ -36,11 +37,9 @@ const Home = () => {
       });
   }, []);
 
-  // https://images-api.nasa.gov/search?q=planete&media_type=image
-
   return (
     <div className={classes.home}>
-      <h1>Space Man : It's not the best choice, it's Space Man's choice !</h1>
+      <h1 className={classes.title}>Next flights</h1>
       <Search />
       <div className={classes.cardDisplay}>
         {marsInfos.map((info) => (

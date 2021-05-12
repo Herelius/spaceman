@@ -21,7 +21,7 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     justifyContent: 'center',
     minWidth: 345,
     width: 600,
-    minHeight: 100,
+    minHeight: 120,
     filter: 'drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3))',
     '& $moveLeft, $moveRight': {
       transition: '0.3s',
@@ -60,6 +60,8 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     alignItems: 'center',
     textAlign: 'center',
     backgroundColor: lightColor,
+    maxHeight: '100%',
+    maxWidth: '100%',
   },
   label: {
     padding: '0 8px',
@@ -74,6 +76,7 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     fontSize: 12,
     margin: 0,
     color: palette.text.secondary,
+    maxWidth: '100%',
   },
   path: {
     flex: 1,
