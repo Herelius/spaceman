@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     flexWrap: 'wrap',
     width: 'auto',
-    height: '100%',
   },
 }));
 

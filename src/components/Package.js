@@ -57,8 +57,6 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     borderBottomRightRadius: borderRadius,
     flex: 1,
     padding: 12,
-    display: 'flex',
-    alignItems: 'center',
     textAlign: 'center',
     backgroundColor: lightColor,
     maxHeight: '100%',
