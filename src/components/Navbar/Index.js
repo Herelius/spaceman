@@ -8,7 +8,6 @@ import { SidebarData } from './SidebarData';
 import { Nav, NavLink, Bars, NavMenu } from './NavbarElements';
 import './Navbar.css';
 
-
 const textDecoration = {
   textDecoration: 'none',
 };
