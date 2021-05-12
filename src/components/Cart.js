@@ -2,12 +2,14 @@
 import React from 'react';
 // eslint-disable-next-line import/no-duplicates
 import { useState } from 'react';
+import * as BiIcons from 'react-icons/bi';
+import * as AiIcons from 'react-icons/ai';
 import './cart.css';
 
 function Cart() {
   const hotelPrice = 100;
   const [cart, updateCart] = useState(0);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return isOpen ? (
     <div className="cart">
@@ -16,7 +18,7 @@ function Cart() {
         className="buttonCloseCart"
         onClick={() => setIsOpen(false)}
       >
-        Close Cart
+        <AiIcons.AiFillCloseCircle />
       </button>
       <h2>Cart</h2>
       <div>
@@ -33,7 +35,7 @@ function Cart() {
       className="buttonOpenCart"
       onClick={() => setIsOpen(true)}
     >
-      Open cart
+      <BiIcons.BiBasket />
     </button>
   );
 }

@@ -17,4 +17,10 @@ export const SidebarData = [
     icon: <SiIcons.SiGnuprivacyguard />,
     cName: 'nav-text',
   },
+  {
+    title: 'Cart',
+    path: '/home',
+    icon: <SiIcons.SiGnuprivacyguard />,
+    cName: 'nav-text',
+  },
 ];

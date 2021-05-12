@@ -8,6 +8,7 @@ import { SidebarData } from './SidebarData';
 import { Nav, NavLink, Bars, NavMenu } from './NavbarElements';
 import './Navbar.css';
 
+
 const textDecoration = {
   textDecoration: 'none',
 };
@@ -60,9 +61,6 @@ const Navbar = () => {
             </NavLink>
             <NavLink style={textDecoration} to="/contact">
               Contact us
-            </NavLink>
-            <NavLink style={textDecoration} to="/cart">
-              Cart
             </NavLink>
           </NavMenu>
         </Nav>
