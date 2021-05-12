@@ -40,7 +40,7 @@ const Home = () => {
 
   /* API results */
   const [alllaunches, setAlllaunches] = useState([]);
-  const [yearLabel, setYearLabel] = React.useState('')
+  const [yearLabel, setYearLabel] = React.useState('');
 
   const handleChange = (event) => {
     setSelectYear(event.target.value);
