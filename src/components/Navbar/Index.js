@@ -27,7 +27,7 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: '#15cdfc' }}>
         <Nav>
           <NavLink style={logo} to="/home">
-            <h1>Space Man</h1>
+            <h1 id="h1">Space Man</h1>
           </NavLink>
           <div className="navbar">
             <NavLink to="#" className="menu-bars">
