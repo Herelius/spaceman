@@ -6,8 +6,8 @@
   align-items: center;
 }*/
 
-#h1 {
-  color: #15cdfc;
+.header {
+  width: 100%;
 }
 
 .menu-bars {

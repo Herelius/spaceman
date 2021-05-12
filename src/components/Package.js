@@ -6,6 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import AirplanemodeActive from '@material-ui/icons/AirplanemodeActive';
 import VerticalTicketRip from '@mui-treasury/components/rip/verticalTicket';
 import { useVerticalRipStyles } from '@mui-treasury/styles/rip/vertical';
+import { Link } from '@material-ui/core';
 
 const mainColor = '#003399';
 const lightColor = '#ecf2ff';
@@ -13,11 +14,15 @@ const borderRadius = 12;
 
 const useStyles = makeStyles(({ palette, breakpoints }) => ({
   card: {
+    marginTop: 50,
+    margin: 20,
     overflow: 'visible',
     background: 'none',
     display: 'flex',
-    minWidth: 343,
-    minHeight: 150,
+    justifyContent: 'center',
+    minWidth: 345,
+    width: 600,
+    minHeight: 120,
     filter: 'drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3))',
     '& $moveLeft, $moveRight': {
       transition: '0.3s',
@@ -52,10 +57,10 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     borderBottomRightRadius: borderRadius,
     flex: 1,
     padding: 12,
-    display: 'flex',
-    alignItems: 'center',
     textAlign: 'center',
     backgroundColor: lightColor,
+    maxHeight: '100%',
+    maxWidth: '100%',
   },
   label: {
     padding: '0 8px',
@@ -70,6 +75,7 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
     fontSize: 12,
     margin: 0,
     color: palette.text.secondary,
+    maxWidth: '100%',
   },
   path: {
     flex: 1,
@@ -105,17 +111,24 @@ const useStyles = makeStyles(({ palette, breakpoints }) => ({
   moveRight: {},
 }));
 
-const Package = React.memo(function PackageCard() {
+export const Package = React.memo(function PackageCard({
+  key,
+  imgUrl,
+  title,
+  launcheDay,
+  wikiLink,
+}) {
   const styles = useStyles();
   const ripStyles = useVerticalRipStyles({
     size: 24,
     rightColor: lightColor,
     tearColor: mainColor,
   });
+
   return (
-    <Card className={styles.card} elevation={0}>
+    <Card key={key} className={styles.card} elevation={0}>
       <div className={cx(styles.left, styles.moveLeft)}>
-        <CardMedia className={styles.media} />
+        <CardMedia className={styles.media} image={imgUrl} />
       </div>
       <VerticalTicketRip
         classes={{
@@ -126,18 +139,19 @@ const Package = React.memo(function PackageCard() {
       />
       <div className={cx(styles.right, styles.moveRight)}>
         <div className={styles.label}>
-          <h2 className={styles.heading}>BEK</h2>
-          <p className={styles.subheader}>Beijing China</p>
+          <h2 className={styles.heading}>ERTH</h2>
+          <p className={styles.subheader}>{title}</p>
         </div>
         <div className={styles.path}>
           <div className={styles.line}>
             <AirplanemodeActive className={styles.plane} />
           </div>
-          <span className={styles.flight}>AB256</span>
+          <span className={styles.flight}>{launcheDay}</span>
         </div>
         <div className={styles.label}>
-          <h2 className={styles.heading}>DMK</h2>
-          <p className={styles.subheader}>Don Meaung</p>
+          <h2 className={styles.heading}>MRS</h2>
+          <p className={styles.subheader}>Roc Hotel</p>
+          <Link href={wikiLink}>More infos</Link>
         </div>
       </div>
     </Card>

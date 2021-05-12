@@ -13,7 +13,7 @@ const textDecoration = {
 };
 const logo = {
   textDecoration: 'none',
-  fontFamily: '#15cdfc',
+  fontFamily: 'Righteous, cursive',
   fontSize: '35px',
 };
 
@@ -23,7 +23,7 @@ const Navbar = () => {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <>
+    <div className="header">
       <IconContext.Provider value={{ color: '#15cdfc' }}>
         <Nav>
           <NavLink style={logo} to="/home">
@@ -64,7 +64,7 @@ const Navbar = () => {
           </NavMenu>
         </Nav>
       </IconContext.Provider>
-    </>
+    </div>
   );
 };
 
