@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   background: {
     margin: theme.spacing(3),
     borderRadius: 10,
+    height: 500,
   },
   button: {
     marginLeft: 'auto',

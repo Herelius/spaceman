@@ -6,6 +6,10 @@
   align-items: center;
 }*/
 
+.header {
+  width: 100%;
+}
+
 .menu-bars {
   margin-left: 2rem;
   font-size: 2rem;
@@ -71,3 +75,4 @@
 span {
   margin-left: 16px;
 }
+
