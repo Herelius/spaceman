@@ -1,7 +1,31 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      display: 'flex',
+      flexDirection: 'column',
+      margin: theme.spacing(3),
+      width: '25ch',
+    },
+  },
+  background: {
+    margin: theme.spacing(3),
+    borderRadius: 10,
+  },
+  button: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+}));
 
 export default function Form() {
+  const classes = useStyles();
   // const [messages, setMessages] = useState([]);
   const [emailInputs, setEmailInputs] = useState({
     email: '',
@@ -33,52 +57,56 @@ export default function Form() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <h1>
-          You can contact us by Space Mail if you fill the form and submit it.
-          Space man is here to hear all your feedbacks and will contact you as
-          soon as possible. <br />
-          It's not the best choice, it's Space Man's choice !
-        </h1>
-        <input
-          type="email"
-          placeholder="Your Space Mail address"
-          name="email"
+    <Paper className={classes.background} elevation={3}>
+      <form
+        className={classes.root}
+        onChange={handleChange}
+        onSubmit={handleSubmit}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
           value={emailInputs.email}
           onChange={handleChange}
+          id="email"
+          name="email"
+          label="Email"
+          variant="outlined"
           required
         />
-
-        <input
-          type="text"
-          placeholder="Your Space Name"
-          name="name"
-          required
+        <TextField
           value={emailInputs.name}
           onChange={handleChange}
+          id="name"
+          name="name"
+          label="Name"
+          variant="outlined"
+          required
         />
-
-        <input
-          type="text"
-          placeholder="Subject"
-          name="subject"
+        <TextField
           value={emailInputs.subject}
           onChange={handleChange}
+          id="subject"
+          name="subject"
+          label="Subject"
+          variant="outlined"
           required
         />
-
-        <textarea
+        <TextField
+          id="description"
           name="description"
-          placeholder="Message"
           value={emailInputs.description}
           onChange={handleChange}
-          cols="30"
-          rows="10"
+          label="Message"
+          multiline
+          rows={4}
+          variant="outlined"
           required
         />
-        <button type="submit">Send</button>
+        <Button className={classes.button} type="submit" variant="contained">
+          Send
+        </Button>
       </form>
-    </div>
+    </Paper>
   );
 }
