@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     width: '70%',
     height: '100%',
-    background: 'rgba(255, 255, 255, 0.91)',
     borderRadius: '10%',
   },
   cardDisplay: {
@@ -40,7 +39,7 @@ const Home = () => {
 
   return (
     <div className={classes.home}>
-      <h1>Next flights</h1>
+      <h1 className={classes.title}>Next flights</h1>
       <Search />
       <div className={classes.cardDisplay}>
         {marsInfos.map((info) => (

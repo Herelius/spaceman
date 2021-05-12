@@ -36,8 +36,4 @@
     transform: rotate(360deg);
   }
 }
-.bg-image {
-  background-image: url('./external-content.duckduckgo.com.jpeg');
-  width: 300;
-  height: 200;
-}
+
